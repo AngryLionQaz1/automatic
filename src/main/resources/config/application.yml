@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      #最大文件大小。值可以使用后缀“MB”或“KB”。指示兆字节或千字节大小。
+      max-file-size: 100MB
+      # 最大请求大小可以是mb也可以是kb
+      max-request-size: 100MB
+  banner:
+    charset: UTF-8
+    location: classpath:static/banner.txt
+    resources:
+      add-mappings: false
+server:
+  port: 8086
+
+
+
+config:
+  addPath: /shell/**,/admin/**,/web/**
+  excludePath: /test/**,/login/**
+  file-host: 127.0.0.1
+  file-port: 8080
+  file-path: E:\img
+  file-url: upload
+
